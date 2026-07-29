@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О студии — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab active"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">О студии</div>
+      <h1>Каждый гость — шеф на один вечер</h1>
+      <p class="lede">«Время Вкусов» — камерное кулинарное пространство в Перми. Идея простая: гость готовит ресторанное блюдо самостоятельно, от и до, под руководством шеф-повара из топового ресторана города.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/onas-chef.jpg" alt="Шеф украшает блюдо соусом"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Философия</div>
+        <h2>Не мастер-класс — вечер, которого иначе бы не было</h2>
+      </div>
+      <div class="bio">
+        <p>Мы не учим готовить впрок. Мы даём два-три часа, в которые вы полностью сосредоточены на одном блюде, одном разговоре и одном столе — без телефона в руке и без спешки.</p>
+        <p>За плечами каждого гостя — шеф, который каждый день готовит в одном из топовых ресторанов Перми. Он не готовит за вас: он ведёт, объясняет и следит, чтобы блюдо получилось таким, каким его задумал автор.</p>
+        <p>Сооснователь студии — Анастасия Кряжова. С ней можно связаться напрямую по вопросам будущих дат, корпоративных программ и партнёрств.</p>
+        <div class="signoff">— команда «Время Вкусов»</div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Где мы</div>
+        <h2>Пермь, ул. Космонавта Леонова, 49</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-stat"><div class="n">5,0</div><div class="l">рейтинг · 48 отзывов</div></div>
+        <div class="trust-stat"><div class="n">2026</div><div class="l">награда «Хорошее место»</div></div>
+        <div class="trust-stat"><div class="n">2 200</div><div class="l">подписчиков ВК</div></div>
+      </div>
+      <a class="cta" href="tel:+79194605224">Написать в директ</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

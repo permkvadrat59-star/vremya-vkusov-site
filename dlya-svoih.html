@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для своих — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab active"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">Для своих</div>
+      <h1>Вечер, на который не позовут третьего</h1>
+      <p class="lede">Свидания, дни рождения, девичники и корпоративы — сегмент, который сегодня несёт бренд. Общий принцип один: гости готовят сами, под руководством шефа, а потом садятся за один стол.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/svoih-table.jpg" alt="Бокалы и свеча на вечернем столе"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Форматы</div>
+        <h2>Четыре повода прийти</h2>
+      </div>
+      <div class="prog-list-lg">
+        <div class="prog">
+          <div><div class="tag">Свидание</div><div class="name">Свидание без телефонов</div></div>
+          <div class="desc">Коробка для телефонов на входе, три блюда, музыка на выбор пары. Готовите ужин вдвоём — от закуски до десерта.</div>
+        </div>
+        <div class="prog">
+          <div><div class="tag">День рождения</div><div class="name">Взрослый день рождения</div></div>
+          <div class="desc">Именинник и гости готовят праздничный стол сами; шеф ведёт процесс и следит, чтобы всё было готово к моменту тоста.</div>
+        </div>
+        <div class="prog">
+          <div><div class="tag">Девичник</div><div class="name">Девичник у плиты</div></div>
+          <div class="desc">Формат для компании подруг — с лёгким соревновательным элементом и общим столом в финале вечера.</div>
+        </div>
+        <div class="prog">
+          <div><div class="tag">Бизнес</div><div class="name">Корпоратив и тимбилдинг</div></div>
+          <div class="desc">Командный формат для компаний: несколько станций, общая задача, разбор результата за ужином. Возможен безналичный расчёт.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Как забронировать</div>
+        <h2>Дата, повод, количество гостей</h2>
+        <p>Сейчас бронирование — через звонок или сообщение в директ; онлайн-бронь появится с обновлением сайта.</p>
+      </div>
+      <a class="cta" href="tel:+79194605224">Написать в директ</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

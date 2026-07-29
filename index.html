@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Время Вкусов — кулинарная студия, Пермь</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab active"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/images/hero-steak.jpg" alt="Филе миньон с соусом на тарелке">
+      </div>
+      <div class="hero-copy">
+        <div class="stamp">17 июля · 20:00 · осталось 4 места</div>
+        <h1>Ужин, который вы приготовите сами</h1>
+        <p class="sub">Под руководством шефа топового ресторана Перми — от и до, своими руками. Не мастер-класс. Вечер, которого иначе бы не было.</p>
+        <div class="proof-row">
+          <span><b>5,0</b> · 48 отзывов</span>
+          <span>«Хорошее место 2026»</span>
+          <span>2 200 подписчиков</span>
+        </div>
+        <a class="cta" href="#afisha">Смотреть афишу →</a>
+      </div>
+    </section>
+
+    <section class="section" id="afisha">
+      <div class="section-head">
+        <div class="eyebrow">Афиша</div>
+        <h2>Сегодня в меню</h2>
+        <p>Каждая дата — новое меню шефа, ограниченное число мест.</p>
+      </div>
+      <div class="afisha-card">
+        <div class="date-badge"><div class="d">25</div><div class="m">Августа</div></div>
+        <div class="menu">
+          <h3>Тар тар из телячьего огузка с картофельными чипсами</h3>
+          <div class="dish">Филе миньон с соусом чимичурри и бейби картофелем</div>
+        </div>
+        <div class="seats">осталось места<br>уточняйте в директ</div>
+      </div>
+      <a class="afisha-link" href="afisha.html">Смотреть все даты →</a>
+    </section>
+
+    <section class="section" id="povod">
+      <div class="section-head">
+        <div class="eyebrow">Ваш повод</div>
+        <h2>Для своих и для семьи</h2>
+        <p>Два равноправных входа — выберите тот, что ближе к сегодняшнему вечеру.</p>
+      </div>
+      <div class="split">
+        <div class="split-card">
+          <div class="kicker">Основная линия</div>
+          <h3>Для своих</h3>
+          <ul>
+            <li>Свидание без телефонов</li>
+            <li>Взрослый день рождения</li>
+            <li>Девичник у плиты</li>
+            <li>Корпоратив и тимбилдинг</li>
+          </ul>
+          <a class="afisha-link" href="dlya-svoih.html">Подробнее →</a>
+        </div>
+        <div class="split-card">
+          <div class="kicker">Точка роста</div>
+          <h3>Для семьи</h3>
+          <ul>
+            <li>Детский день рождения по-взрослому</li>
+            <li>Семейное меню недели</li>
+            <li>Каникулярный интенсив</li>
+          </ul>
+          <a class="afisha-link" href="dlya-semi.html">Подробнее →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flagship" id="flagship">
+      <img src="assets/images/puteshestviya-yacht.jpg" alt="Гастрономическое путешествие под парусами на закате">
+      <div class="flagship-overlay">
+        <div class="flagship-copy">
+          <div class="eyebrow">Гастропутешествия</div>
+          <h2>Гастрономическое путешествие под парусами на закате</h2>
+          <div class="dish">Хумус из батата с тигровыми креветками и соусом карри-манго</div>
+          <div class="dish">Салат с прошутто и клубникой · welcome-drink · вино к каждому блюду</div>
+          <div class="price-row">
+            <span class="price">6 500 ₽</span>
+            <span class="incl">Трансфер включён</span>
+          </div>
+          <a class="cta ghost" style="margin-top:20px; color:#F3ECE6; border-color:rgba(243,236,230,.35);" href="puteshestviya.html">Все гастропутешествия →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Доверие и бронь</div>
+        <h2>Прежде чем написать нам</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-stat"><div class="n">5,0</div><div class="l">рейтинг · 48 отзывов</div></div>
+        <div class="trust-stat"><div class="n">2026</div><div class="l">награда «Хорошее место»</div></div>
+        <div class="trust-stat"><div class="n">6 500 ₽</div><div class="l">гастропутешествие с трансфером</div></div>
+      </div>
+      <a class="cta" href="tel:+79194605224">Забронировать своё время</a>
+      <a class="afisha-link" href="sertifikaty.html">Или подарить сертификат →</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

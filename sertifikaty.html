@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сертификаты — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab active"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">Сертификаты</div>
+      <h1>Подарок без риска промахнуться</h1>
+      <p class="lede">Сертификат «Время Вкусов» — это вечер, а не вещь. Подходит на день рождения, годовщину, 8 марта или просто «спасибо» — получатель сам выбирает дату и программу.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/sertifikaty-gift.jpg" alt="Подарочные коробки с лентами"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Варианты</div>
+        <h2>Три способа оформить</h2>
+      </div>
+      <div class="tiers">
+        <div class="tier">
+          <div class="occasion">Свидание</div>
+          <div class="amount">На двоих</div>
+          <p>Сертификат на программу «Для своих» — свидание, годовщину или день рождения на двоих.</p>
+        </div>
+        <div class="tier">
+          <div class="occasion">Компания</div>
+          <div class="amount">На группу</div>
+          <p>Девичник, день рождения или дружеская компания — сертификат на программу для нескольких гостей.</p>
+        </div>
+        <div class="tier">
+          <div class="occasion">Своя сумма</div>
+          <div class="amount">Любой номинал</div>
+          <p>Если повод не укладывается в готовый формат — сертификат на сумму, которую получатель потратит на любую дату в афише.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Как получить</div>
+        <h2>Пока — через директ</h2>
+        <p>Онлайн-оплата и мгновенная выдача сертификата появятся с обновлением сайта. Сейчас оформление занимает один звонок или сообщение.</p>
+      </div>
+      <a class="cta" href="tel:+79194605224">Заказать сертификат</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

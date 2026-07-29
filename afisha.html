@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Афиша — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab active"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">Афиша</div>
+      <h1>Меню недели меняется — места нет</h1>
+      <p class="lede">Каждая дата в афише — отдельное меню, которое придумывает шеф специально к этой встрече. Мест всегда немного: студия рассчитана на камерную группу, а не на поток.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/afisha-dinner.jpg" alt="Ужин на двоих за столом"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Ближайшая дата</div>
+        <h2>Подтверждено</h2>
+      </div>
+      <div class="afisha-card">
+        <div class="date-badge"><div class="d">25</div><div class="m">Августа</div></div>
+        <div class="menu">
+          <h3>Тар тар из телячьего огузка с картофельными чипсами</h3>
+          <div class="dish">Филе миньон с соусом чимичурри и бейби картофелем</div>
+        </div>
+        <div class="seats">осталось места<br>уточняйте в директ</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Формируется</div>
+        <h2>Следующие даты</h2>
+        <p>Меню ещё собирается шефом — точный состав появится в афише и в группе ВК за несколько дней до даты.</p>
+      </div>
+      <div class="afisha-card">
+        <div class="date-badge"><div class="d">—</div><div class="m">Сентябрь</div></div>
+        <div class="menu">
+          <h3>Меню уточняется</h3>
+          <div class="dish">Следите за афишей в группе ВК</div>
+        </div>
+        <div class="seats">запись<br>по телефону</div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Не нашли подходящую дату</div>
+        <h2>Соберём отдельную встречу под ваш повод</h2>
+        <p>Свидание, день рождения, девичник или корпоратив можно организовать вне афиши — в удобный вам день.</p>
+      </div>
+      <a class="cta" href="tel:+79194605224">Написать в директ</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

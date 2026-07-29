@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для семьи — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab active"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">Для семьи</div>
+      <h1>Не сдать ребёнка отдельно — приготовить вместе</h1>
+      <p class="lede">Детские праздники и семейные мастер-классы уже есть в услугах студии — но пока не в полной силе. Здесь родитель и ребёнок стоят у одной плиты, а не разъезжаются по разным залам.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/semi-kids.jpg" alt="Дети в поварских колпаках готовят вместе"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Форматы</div>
+        <h2>Три программы</h2>
+      </div>
+      <div class="prog-list-lg">
+        <div class="prog">
+          <div><div class="tag">Праздник</div><div class="name">Детский день рождения по-взрослому</div></div>
+          <div class="desc">Тот же ресторанный сценарий, адаптированный по возрасту — не аниматор, а «свой шеф на час». Именинник и гости готовят стол сами.</div>
+        </div>
+        <div class="prog">
+          <div><div class="tag">Раз в месяц</div><div class="name">Семейное меню недели</div></div>
+          <div class="desc">Отдельная дата в афише, куда родитель приходит готовить вместе с ребёнком — а не сдаёт его отдельно на детский мастер-класс.</div>
+        </div>
+        <div class="prog">
+          <div><div class="tag">Каникулы</div><div class="name">Каникулярный интенсив</div></div>
+          <div class="desc">Короткая программа на школьные каникулы для родителей, которым нужно занять ребёнка не экраном.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Как забронировать</div>
+        <h2>Расскажите про повод и возраст ребёнка</h2>
+        <p>Программу и меню подберём под конкретный день рождения или дату — напишите или позвоните.</p>
+      </div>
+      <a class="cta" href="tel:+79194605224">Написать в директ</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

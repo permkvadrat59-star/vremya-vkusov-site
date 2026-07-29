@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гастропутешествия — Время Вкусов</title>
+<script>
+(function () {
+  try {
+    var m = localStorage.getItem('vv-mode');
+    if (m !== 'day' && m !== 'evening') {
+      var h = new Date().getHours();
+      m = (h >= 19 || h < 7) ? 'evening' : 'day';
+    }
+    if (m === 'evening') document.documentElement.classList.add('evening');
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="spine" aria-label="Основная навигация">
+    <div class="light-toggle">
+      <button class="end-label" id="labelDay" type="button">Днём</button>
+      <div class="light-track">
+        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+      </div>
+      <button class="end-label" id="labelEve" type="button">Вечером</button>
+    </div>
+    <ul class="tabs">
+      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
+      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
+      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
+      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
+      <li class="tab active"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
+      <li class="tab"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
+      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    </ul>
+    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
+  </nav>
+
+  <main>
+    <div class="page-hero">
+      <div class="eyebrow">Гастропутешествия</div>
+      <h1>Яхта — только первый выезд</h1>
+      <p class="lede">Логика простая: премиальный ужин можно вынести за пределы студии. Яхта на закате уже работает и доказала формат; дальше — сезонные форматы под тем же принципом.</p>
+    </div>
+    <div class="page-banner"><img src="assets/images/puteshestviya-yacht.jpg" alt="Парус на закате"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Уже проведено</div>
+        <h2>Гастрономическое путешествие под парусами на закате</h2>
+      </div>
+      <div class="afisha-card">
+        <div class="date-badge"><div class="d">17</div><div class="m">Июля</div></div>
+        <div class="menu">
+          <h3>Хумус из батата с тигровыми креветками и соусом карри-манго</h3>
+          <div class="dish">Салат с прошутто и клубникой · welcome-drink · вино к каждому блюду</div>
+        </div>
+        <div class="seats">6 500 ₽<br>трансфер включён</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">В разработке</div>
+        <h2>Следующие форматы</h2>
+        <p>Тот же премиальный сценарий, перенесённый на другие сезоны и площадки города.</p>
+      </div>
+      <div class="roadmap-note"><div class="when">Осень</div><div class="what">Ужин на веранде — открытая площадка с видом, пока идёт тёплая погода.</div></div>
+      <div class="roadmap-note"><div class="when">Зима</div><div class="what">Закрытая крыша или зимний сад — тот же сценарий в помещении с видом на город.</div></div>
+      <div class="roadmap-note"><div class="when">Формат</div><div class="what">Теплоход по реке — расширение логики яхты на межсезонье.</div></div>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-head">
+        <div class="eyebrow">Хотите на борт</div>
+        <h2>Места ограничены количеством кают</h2>
+      </div>
+      <a class="cta" href="tel:+79194605224">Написать в директ</a>
+      <div class="contact-row">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Время Вкусов — кулинарная студия</span>
+    <span>Пермь, ул. Космонавта Леонова, 49</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
