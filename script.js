@@ -39,6 +39,9 @@
   var closeBtn = document.getElementById('menuClose');
 
   function openMenu() {
+    var r = menuBtn.getBoundingClientRect();
+    overlay.style.setProperty('--ox', (r.left + r.width / 2) + 'px');
+    overlay.style.setProperty('--oy', (r.top + r.height / 2) + 'px');
     overlay.classList.add('open');
     menuBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
@@ -66,5 +69,26 @@
       reserveForm.hidden = true;
       reserveSuccess.hidden = false;
     });
+  }
+
+  var grain = document.createElement('div');
+  grain.className = 'grain';
+  grain.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(grain);
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    var revealTargets = document.querySelectorAll(
+      '.about-split, #afisha, #povod, .flagship, #trust, #reserve, .page-hero, .page-banner, .prog-list-lg, .tiers, .bio'
+    );
+    revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    revealTargets.forEach(function (el) { io.observe(el); });
   }
 })();
