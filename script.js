@@ -33,4 +33,28 @@
   });
   labelDay.addEventListener('click', function () { setMode('day'); });
   labelEve.addEventListener('click', function () { setMode('evening'); });
+
+  var overlay = document.getElementById('navOverlay');
+  var menuBtn = document.getElementById('menuToggle');
+  var closeBtn = document.getElementById('menuClose');
+
+  function openMenu() {
+    overlay.classList.add('open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    overlay.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  if (menuBtn && overlay) {
+    menuBtn.addEventListener('click', function () {
+      if (overlay.classList.contains('open')) { closeMenu(); } else { openMenu(); }
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
 })();

@@ -20,25 +20,42 @@
 </head>
 <body>
 
-  <nav class="spine" aria-label="Основная навигация">
-    <div class="light-toggle">
-      <button class="end-label" id="labelDay" type="button">Днём</button>
-      <div class="light-track">
-        <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
-      </div>
-      <button class="end-label" id="labelEve" type="button">Вечером</button>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-badge" id="menuToggle" aria-expanded="false" aria-controls="navOverlay" aria-label="Открыть меню">Меню</button>
     </div>
-    <ul class="tabs">
-      <li class="tab"><a href="index.html"><span class="rivet"></span><span class="lbl">Главная</span></a></li>
-      <li class="tab"><a href="afisha.html"><span class="rivet"></span><span class="lbl">Афиша</span></a></li>
-      <li class="tab"><a href="dlya-svoih.html"><span class="rivet"></span><span class="lbl">Для своих</span></a></li>
-      <li class="tab"><a href="dlya-semi.html"><span class="rivet"></span><span class="lbl">Для семьи</span></a></li>
-      <li class="tab"><a href="puteshestviya.html"><span class="rivet"></span><span class="lbl">Путешествия</span></a></li>
-      <li class="tab active"><a href="sertifikaty.html"><span class="rivet"></span><span class="lbl">Сертификаты</span></a></li>
-      <li class="tab"><a href="o-nas.html"><span class="rivet"></span><span class="lbl">О студии</span></a></li>
+    <a class="logo-box" href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a>
+    <div class="topbar-right"><a class="cta-oval" href="afisha.html">Афиша</a></div>
+  </header>
+
+  <div class="page-frame"></div>
+
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay-close" id="menuClose" aria-label="Закрыть меню">Закрыть</button>
+    <ul class="overlay-links">
+      <li><a href="index.html"><span class="num">01</span>Главная</a></li>
+      <li><a href="afisha.html"><span class="num">02</span>Афиша</a></li>
+      <li><a href="dlya-svoih.html"><span class="num">03</span>Для своих</a></li>
+      <li><a href="dlya-semi.html"><span class="num">04</span>Для семьи</a></li>
+      <li><a href="puteshestviya.html"><span class="num">05</span>Путешествия</a></li>
+      <li><a href="sertifikaty.html" class="active"><span class="num">06</span>Сертификаты</a></li>
+      <li><a href="o-nas.html"><span class="num">07</span>О студии</a></li>
     </ul>
-    <div class="spine-foot"><a href="index.html"><img src="assets/images/logo.png" alt="Время Вкусов"></a></div>
-  </nav>
+    <div class="overlay-foot">
+      <div class="light-toggle">
+        <button class="end-label" id="labelDay" type="button">Днём</button>
+        <div class="light-track">
+          <button class="light-thumb" id="lightThumb" aria-pressed="false" aria-label="Переключить освещение сайта"></button>
+        </div>
+        <button class="end-label" id="labelEve" type="button">Вечером</button>
+      </div>
+      <div class="overlay-contact">
+        <a href="tel:+79194605224">+7 919 460-52-24</a>
+        <span>Пермь, ул. Космонавта Леонова, 49</span>
+        <a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a>
+      </div>
+    </div>
+  </div>
 
   <main>
     <div class="page-hero">
