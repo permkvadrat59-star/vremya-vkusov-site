@@ -207,6 +207,13 @@ html.evening .light-thumb { left: calc(100% - 16px); }
 .cta.ghost { background: none; color: var(--ink); border: 1px solid var(--line-strong); }
 @media (max-width: 860px) { .hero { grid-template-columns: 1fr; min-height: auto; } .hero-media { height: 46vh; } .hero-copy { padding: 40px 26px; } }
 
+.hero-full { border-bottom: 1px solid var(--line); transition: border-color .6s ease; }
+.hero-full .hero-media { height: 76vh; }
+.hero-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 34px; justify-content: space-between; padding: 26px 30px; }
+.hero-strip .stamp { font-family: var(--font-mono); font-size: 13px; color: var(--accent); transition: color .6s ease; }
+.hero-strip .proof-row { margin-top: 0; }
+@media (max-width: 700px) { .hero-full .hero-media { height: 50vh; } .hero-strip { padding: 20px 20px; } }
+
 /* Afisha preview */
 .section { padding: 88px 56px; border-bottom: 1px solid var(--line); }
 .section-head { margin-bottom: 40px; max-width: 640px; }
@@ -288,3 +295,69 @@ footer { padding: 34px 56px; font-family: var(--font-mono); font-size: 11px; col
 .roadmap-note:first-child { border-top: none; }
 .roadmap-note .when { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-faint); white-space: nowrap; text-transform: uppercase; letter-spacing: .05em; }
 .roadmap-note .what { font-size: 14.5px; color: var(--ink-muted); }
+
+/* ===================== MASTHEAD MARQUEE ===================== */
+.masthead { border-bottom: 1px solid var(--line); overflow: hidden; transition: border-color .6s ease; }
+.marquee { overflow: hidden; white-space: nowrap; padding: 18px 0 6px; }
+.marquee-track { display: inline-flex; align-items: baseline; width: max-content; animation: marquee 26s linear infinite; }
+.marquee-track .word {
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  letter-spacing: -0.02em; font-size: clamp(46px, 8.6vw, 128px); line-height: 1;
+  color: var(--accent); padding: 0 22px; transition: color .6s ease;
+}
+.marquee-track .word .dot { color: var(--accent-2); padding: 0 14px; transition: color .6s ease; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+.masthead-foot { padding: 0 30px 18px; font-family: var(--font-mono); font-style: italic; font-size: 13px; color: var(--accent-2); transition: color .6s ease; }
+@media (max-width: 640px) { .masthead-foot { padding: 0 16px 14px; } }
+
+/* ===================== PHOTO CAPTION ===================== */
+.photo-caption {
+  position: absolute; left: 20px; bottom: 20px; z-index: 2; max-width: 320px;
+  background: rgba(18,14,13,.84); color: #F3ECE6;
+  padding: 18px 22px; font-family: var(--font-display); font-style: italic; font-size: 15.5px; line-height: 1.45;
+}
+@media (max-width: 640px) { .photo-caption { left: 14px; right: 14px; bottom: 14px; max-width: none; padding: 14px 16px; font-size: 14px; } }
+
+/* ===================== ABOUT SPLIT (drop cap + icons) ===================== */
+.about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.about-icon { color: var(--accent); margin-bottom: 26px; transition: color .6s ease; }
+.about-icon svg { width: 58px; height: 58px; display: block; }
+.drop-copy { font-size: 17px; color: var(--ink-muted); line-height: 1.75; max-width: 46ch; }
+.drop-copy .dropcap {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 66px; line-height: .8;
+  padding: 6px 12px 0 0; color: var(--ink);
+}
+.cta-oval-lg {
+  display: inline-block; margin-top: 26px; border: 1px solid var(--accent); border-radius: 999px;
+  padding: 14px 30px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent); transition: border-color .6s ease, color .2s ease, background-color .2s ease;
+}
+.cta-oval-lg:hover { background: var(--accent); color: var(--bg); }
+.contact-big a { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 3vw, 36px); color: var(--ink); }
+.contact-meta { display: flex; flex-direction: column; gap: 16px; margin-top: 26px; font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-muted); }
+.contact-meta b { color: var(--ink); font-weight: 400; font-family: var(--font-body); font-size: 14px; display: block; margin-bottom: 3px; }
+@media (max-width: 760px) { .about-split { grid-template-columns: 1fr; gap: 44px; } }
+
+/* ===================== SWAP-HOVER BUTTON ===================== */
+.cta.swap-hover { position: relative; overflow: hidden; }
+.cta.swap-hover .l1, .cta.swap-hover .l2 { display: block; transition: transform .35s cubic-bezier(.65,0,.35,1); }
+.cta.swap-hover .l2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: translateY(100%); }
+.cta.swap-hover:hover .l1 { transform: translateY(-100%); }
+.cta.swap-hover:hover .l2 { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .cta.swap-hover .l1, .cta.swap-hover .l2 { transition: none; } }
+
+/* ===================== RESERVE CARD ===================== */
+.reserve-card { border: 1px solid var(--line-strong); border-radius: 14px; padding: 52px; background: var(--surface); transition: background-color .6s ease, border-color .6s ease; }
+.reserve-head { max-width: 540px; margin-bottom: 36px; }
+.reserve-head p { color: var(--ink-muted); font-size: 15px; margin-top: 10px; }
+.reserve-form { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 30px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); }
+.field input { background: none; border: none; border-bottom: 1px solid var(--line-strong); padding: 8px 2px; font-family: var(--font-body); font-size: 15px; color: var(--ink); border-radius: 0; }
+.field input:focus { outline: none; border-color: var(--accent); }
+.field input::placeholder { color: var(--ink-faint); }
+.reserve-form .field.full { grid-column: 1 / -1; }
+.reserve-form button { grid-column: 1 / -1; justify-self: start; margin-top: 12px; border: none; cursor: pointer; }
+.reserve-success { margin-top: 20px; font-size: 14.5px; color: var(--accent-2); }
+@media (max-width: 640px) { .reserve-form { grid-template-columns: 1fr; } .reserve-card { padding: 30px 22px; } }

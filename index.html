@@ -58,21 +58,53 @@
   </div>
 
   <main>
-    <section class="hero">
+    <div class="masthead">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+          <span class="word">Время вкусов<span class="dot">·</span></span>
+        </div>
+      </div>
+      <div class="masthead-foot">Рейтинг 5,0 на Яндекс.Картах — «Хорошее место» 2026</div>
+    </div>
+
+    <section class="hero-full">
       <div class="hero-media">
         <img src="assets/images/hero-steak.jpg" alt="Филе миньон с соусом на тарелке">
         <div class="stamp-badge"><div class="inner">5,0 · 48 отзывов<br>«Хорошее место» 2026</div></div>
+        <div class="photo-caption">Не мастер-класс. Вечер, которого иначе бы не было — вы готовите сами, под руководством шефа топового ресторана Перми.</div>
       </div>
-      <div class="hero-copy">
+      <div class="hero-strip">
         <div class="stamp">17 июля · 20:00 · осталось 4 места</div>
-        <h1>Ужин, который вы приготовите сами</h1>
-        <p class="sub">Под руководством шефа топового ресторана Перми — от и до, своими руками. Не мастер-класс. Вечер, которого иначе бы не было.</p>
         <div class="proof-row">
           <span><b>5,0</b> · 48 отзывов</span>
           <span>«Хорошее место 2026»</span>
           <span>2 200 подписчиков</span>
         </div>
-        <a class="cta" href="#afisha">Смотреть афишу →</a>
+        <a class="cta swap-hover" href="#afisha"><span class="l1">Смотреть афишу →</span><span class="l2">Смотреть афишу →</span></a>
+      </div>
+    </section>
+
+    <section class="section about-split">
+      <div>
+        <div class="about-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="38" cy="32" r="21"/><circle cx="38" cy="32" r="12.5"/><line x1="6" y1="8" x2="8" y2="30"/><line x1="2" y1="8" x2="4" y2="22"/><line x1="10" y1="8" x2="12" y2="22"/><line x1="7" y1="29" x2="9" y2="56"/></svg></div>
+        <p class="drop-copy"><span class="dropcap">К</span>аждый гость — шеф на один вечер. Мы не учим готовить впрок: даём два-три часа, в течение которых вы сосредоточены на одном блюде и одном столе, под руководством шефа топового ресторана Перми.</p>
+        <a class="cta-oval-lg" href="o-nas.html">Подробнее о студии</a>
+      </div>
+      <div>
+        <div class="about-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 11c-2 7 2 19 10 27s20 12 27 10l4-9c0-3-2-5-5-6l-9-3c-2-1-4 0-5 2l-2 4c-5-2-9-6-11-11l4-2c2-1 3-3 2-5l-3-9c-1-3-3-5-6-5z"/></svg></div>
+        <div class="contact-big"><a href="tel:+79194605224">+7 919 460-52-24</a></div>
+        <div class="contact-meta">
+          <div><b>Часы записи</b>Пн–Вс 10:00–21:00</div>
+          <div><b>Адрес</b>Пермь, ул. Космонавта Леонова, 49</div>
+          <div><b>VK</b><a href="https://vk.com/vremy_vkusov">vk.com/vremy_vkusov</a></div>
+        </div>
       </div>
     </section>
 
@@ -143,7 +175,7 @@
 
     <section class="section" id="trust">
       <div class="section-head">
-        <div class="eyebrow">Доверие и бронь</div>
+        <div class="eyebrow">Доверие</div>
         <h2>Прежде чем написать нам</h2>
       </div>
       <div class="trust-grid">
@@ -151,8 +183,25 @@
         <div class="trust-stat"><div class="n">2026</div><div class="l">награда «Хорошее место»</div></div>
         <div class="trust-stat"><div class="n">6 500 ₽</div><div class="l">гастропутешествие с трансфером</div></div>
       </div>
-      <a class="cta" href="tel:+79194605224">Забронировать своё время</a>
       <a class="afisha-link" href="sertifikaty.html">Или подарить сертификат →</a>
+    </section>
+
+    <section class="section" id="reserve">
+      <div class="reserve-card">
+        <div class="reserve-head">
+          <div class="eyebrow">Бронь</div>
+          <h2>Забронируйте своё время</h2>
+          <p>Оставьте контакты — мы перезвоним и подтвердим дату и меню. Пока это заявка на звонок, не мгновенное онлайн-бронирование.</p>
+        </div>
+        <form class="reserve-form" id="reserveForm">
+          <div class="field"><label for="r-name">Имя</label><input id="r-name" type="text" placeholder="Как к вам обращаться" required></div>
+          <div class="field"><label for="r-phone">Телефон</label><input id="r-phone" type="tel" placeholder="+7 900 000-00-00" required></div>
+          <div class="field"><label for="r-people">Гостей</label><input id="r-people" type="text" placeholder="2 человека" required></div>
+          <div class="field"><label for="r-date">Дата и время</label><input id="r-date" type="text" placeholder="дд.мм.гггг --:--" required></div>
+          <button type="submit" class="cta swap-hover"><span class="l1">Отправить заявку</span><span class="l2">Отправить заявку</span></button>
+        </form>
+        <p class="reserve-success" id="reserveSuccess" hidden>Спасибо! Заявка получена — мы позвоним, чтобы подтвердить дату и меню.</p>
+      </div>
       <div class="contact-row">
         <a href="tel:+79194605224">+7 919 460-52-24</a>
         <span>Пермь, ул. Космонавта Леонова, 49</span>

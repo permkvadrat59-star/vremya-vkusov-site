@@ -57,4 +57,14 @@
       if (e.key === 'Escape') closeMenu();
     });
   }
+
+  var reserveForm = document.getElementById('reserveForm');
+  var reserveSuccess = document.getElementById('reserveSuccess');
+  if (reserveForm && reserveSuccess) {
+    reserveForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      reserveForm.hidden = true;
+      reserveSuccess.hidden = false;
+    });
+  }
 })();
