@@ -373,6 +373,18 @@ footer { padding: 34px 56px; font-family: var(--font-mono); font-size: 11px; col
 .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
 .about-icon { color: var(--accent); margin-bottom: 26px; transition: color .6s ease; }
 .about-icon svg { width: 58px; height: 58px; display: block; }
+
+.sprig-wrap { position: relative; }
+.sprig-bg {
+  position: absolute; right: -6%; top: 50%; transform: translateY(-50%);
+  width: 46%; max-width: 220px; height: auto; color: var(--accent);
+  opacity: .14; z-index: 0; pointer-events: none; transition: color .6s ease;
+}
+.sprig-wrap > .about-icon,
+.sprig-wrap > .drop-copy,
+.sprig-wrap > .cta-oval-lg { position: relative; z-index: 1; }
+@media (max-width: 760px) { .sprig-bg { width: 34%; right: -4%; opacity: .12; } }
+
 .drop-copy { font-size: 17px; color: var(--ink-muted); line-height: 1.75; max-width: 46ch; }
 .drop-copy .dropcap {
   float: left; font-family: var(--font-display); font-weight: 700; font-size: 66px; line-height: .8;
